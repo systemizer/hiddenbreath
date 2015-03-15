@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body %}
+<div class="center-container">
+  <h1>HiddenBreath</h1>
+  <p>
+    HiddenBreath is a servce that allows you to share messages and data
+    in the situation you are unable to do so yourself. This service itself
+    should not be trusted; this merely routes encrypted messages on your behalf. This
+    means that all messages and data uploaded should be encrypted, and you
+    should provide your recipients with secret keys via an alternative
+    medium.
+  </p>
+
+  <hr>
+
+  <h2>How it works</h2>
+  <p>
+    I will monitor your public social feeds on the internet (i.e. twitter, facebook, instagram, etc). If I don't see that you've posted a message in the past month, I will call you over the phone (with a number you've provided). This number should be a personal number so I can verify whether to disseminate your encrypted messages. If I fail to reach you after 3 attempts (at random intervals over the month following your inactivity), I will automatically send your encrypted messages to recipients you have previously specified.
+  </p>
+  <hr />
+
+  <h2>Questions you might have</h2>
+  <h4>Why shouldn't I trust this service?</h4>
+  <p>As far as you are aware, I am a stranger; you cannot trust me. This is why you must encrypt your messages so I can't read them. If you upload a message that I think is not properly encrypted, I will not accept it.</p>
+
+  <h4>How do I encrypt messages?</h4>
+  <p>This is where you need to be careful. If your encryption scheme is not secure, someone could brute force the decryption. If you use a correct scheme, but the software you use to encrypt is not trusted, there might exist a backdoor that breaks your encryption. I personally recommend using <a href="https://www.gnupg.org/">gpg</a>. Make sure you understand GPG enough before using it.
+  </p>
+  <h4>How do I get my recipients to decrypt the message</h4>
+  <p>In public-key encryption, a private key is necessary to decrypt a message. You can think of this as a password. The only sure way you can deliver a password securely is face-to-face. If you're using GPG, you should have a <a href="https://en.wikipedia.org/wiki/Key_signing_party">key-signing party</a> with those individuals you want to share messages.</p>
+</div>
+
+
+
+{% endblock %}
